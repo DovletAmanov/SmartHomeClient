@@ -9,8 +9,11 @@ class Header extends Component{
             <Auxiliary>
                 <section id="showcase">
                     <div className="container">
-                        <h1>Welcome to Smart Home Simulator</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu luctus ipsum, rhoncus semper magna. Nulla nec magna sit amet sem interdum condimentum.</p>
+                        <div className="ptext">
+                            <div className="border">
+                                <h1>Welcome to Smart Home Simulator</h1>
+                             </div>
+                        </div>
                     </div>
                 </section>
             </Auxiliary>

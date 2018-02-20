@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import Auxiliary from './hoc/Auxiliary';
 
 
@@ -15,11 +16,11 @@ class Navbar extends Component{
                     </div>
                     <nav>
                     <ul>
-                        <li className="current"><a href="#">Home</a></li>
-                        <li><a href="#">About Project</a></li>
-                        <li><a href="#">Home Status</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Sign In</a></li>
+                        <li><a><Link to="/">Home</Link></a></li>
+                        <li><a><Link to="/aboutproject">About Project</Link></a></li>
+                        <li><a><Link to="/homestatus">Home Status</Link></a></li>
+                        <li><a><Link to="/contact">Contact Us</Link></a></li>
+                        <li><a><Link to="/login">Sign In</Link></a></li>
                     </ul>
                     </nav>
                 </div>

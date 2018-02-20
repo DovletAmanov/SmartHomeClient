@@ -5,15 +5,13 @@ import LoginPage from './LoginPage';
 import HomeStatusScreen from './HomeStatusBody/HomeStatusScreen';
 import NotFoundScreen from './NotFoundScreen';
 import AboutProjectPage from './AboutProjectPage';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import { Switch, Route, Redirect} from 'react-router-dom';
 
 
 const MainLayout = () => (
 
         <Auxiliary>
 
-            <BrowserRouter>
-            
                 <Switch>
 
                     <Route exact path="/" component={MainBody} />
@@ -24,8 +22,6 @@ const MainLayout = () => (
                     <Redirect from='*' to='/notfound' />
 
                 </Switch>
-
-            </BrowserRouter>
 
         </Auxiliary>
     

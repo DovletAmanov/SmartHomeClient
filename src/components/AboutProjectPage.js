@@ -9,7 +9,6 @@ class NotFound extends Component{
                 <section id="aboutshowcase">
                     <div className="container">
                         <h1>About Project</h1>
-                        <p>How it works?</p>
                     </div>
                 </section>
 
@@ -29,7 +28,7 @@ class NotFound extends Component{
                     <div className="aboutfeatures">
                         <div className="aboutsensor">
                             <div className="aboutimgs">
-                                <img src="./img/celsius.png"/>
+                                <img src="./img/celsius.png" alt="img"/>
                             </div>
                             <div className="abouttitles">
                                 <h3>Heat & Humidity Sensors</h3>
@@ -43,13 +42,13 @@ class NotFound extends Component{
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                             </div>
                             <div className="aboutimgs">
-                                <img src="./img/umbrella.png"/>
+                                <img src="./img/umbrella.png" alt="img"/>
                             </div>
                         </div>
 
                         <div className="aboutsensor">
                             <div className="aboutimgs">
-                                <img src="./img/garage.png"/>
+                                <img src="./img/garage.png" alt="img"/>
                             </div>
                             <div className="abouttitles">
                                 <h3>Autonomous Garage</h3>
@@ -69,8 +68,8 @@ class NotFound extends Component{
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies
                         </p>
                         <div className="howitworksimgs">
-                            <img src="./img/howitworks1.png"/>
-                            <img src="./img/howitworks2.png"/>
+                            <img src="./img/howitworks1.png" alt="img"/>
+                            <img src="./img/howitworks2.png" alt="img"/>
                         </div>
                     </div>
 

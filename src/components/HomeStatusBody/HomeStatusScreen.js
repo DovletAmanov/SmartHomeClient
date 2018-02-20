@@ -23,6 +23,7 @@ class HomeStatusScreen extends Component{
         const { temperature, humidity } = this.state;
        
         return (
+          <Auxiliary>
           <div style={{ textAlign: "center" }}>
 
             {temperature
@@ -38,6 +39,7 @@ class HomeStatusScreen extends Component{
               : <p>Loading...</p>}
 
           </div>
+          </Auxiliary>
         );
     }
 }
