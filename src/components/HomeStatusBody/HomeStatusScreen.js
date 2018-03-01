@@ -9,7 +9,9 @@ class HomeStatusScreen extends Component{
         this.state = {
           temperature: false,
           humidity: false,
-          endpoint: "http://192.168.1.103:8888"
+          gasstatus: false,
+          garagestatus: false,
+          endpoint: "http://192.168.1.105:8888"
         };
       }
 
@@ -20,25 +22,60 @@ class HomeStatusScreen extends Component{
       }
 
     render(){
-        const { temperature, humidity } = this.state;
+        const { temperature, humidity, gasstatus, garagestatus } = this.state;
        
         return (
           <Auxiliary>
-          <div style={{ textAlign: "center" }}>
+          
+          <section id="sensorblocks">
+            <div className="heatdata">
+              <h1>Heat & Humidity Status</h1>
+              <img src="./img/celsius.png"/>
+              <div style={{ textAlign: "center" }}>
 
             {temperature
               ? <p>
                    Temperature: {temperature} Celsius 
                 </p>
-              : <p>Loading...</p>}
+              : <p>Loading data from heat sensor...</p>}
 
               {humidity
               ? <p>
                    Humidity: {humidity} %
                 </p>
-              : <p>Loading...</p>}
+              : <p>Loading data from heat sensor...</p>}
 
-          </div>
+              </div>
+            </div>
+
+            
+            <div className="gasdata">
+                <h1>Dangerous Gas Status</h1>
+                <img src="./img/umbrella.png"/>
+                
+                {
+                  gasstatus
+                  ?
+                  <p>Methane:</p>
+                  :
+                  <p>Loading data from gas sensor...</p>
+                }
+
+            </div>
+
+            
+            <div className="garagedata">
+                <h1>Garage Door Status</h1>
+                <img src="./img/garage.png"/>
+                {
+                  garagestatus 
+                  ?
+                  <p>The door is opened</p>
+                  :
+                  <p>The door is closed</p>
+                }
+            </div>
+          </section>
           </Auxiliary>
         );
     }

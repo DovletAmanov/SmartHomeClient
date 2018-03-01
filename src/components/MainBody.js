@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Header from './Header';
 import AboutProjectScreen from './AboutProjectScreen';
 import TeamMembers from './TeamMembers';
-import ContactScreen from './ContactScreen';
 import Auxiliary from './hoc/Auxiliary';
 
 class MainBody extends Component{
@@ -17,8 +16,6 @@ class MainBody extends Component{
                 <AboutProjectScreen />
 
                 <TeamMembers />
-
-                <ContactScreen />
                 
             </Auxiliary>
 
