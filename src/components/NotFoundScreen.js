@@ -6,7 +6,7 @@ class NotFound extends Component{
     render(){
         return(
             <Auxiliary>
-            <div>Hello Im NotFound :)</div>
+            <img src="./img/404.png" id="notfoundcomp" alt="img"/>
             </Auxiliary>
         )
     }

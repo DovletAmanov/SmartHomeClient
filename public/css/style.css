@@ -391,6 +391,16 @@ body{
   grid-template-columns: repeat(3,1fr);
   grid-column-gap: 2em;
 }
+
+/* Not Found Page */
+
+#notfoundcomp{
+  height: 100%; 
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   
   /* Media Queries */
   @media(max-width: 768px){

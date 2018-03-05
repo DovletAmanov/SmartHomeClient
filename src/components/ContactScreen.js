@@ -18,7 +18,7 @@ class ContactScreen extends Component{
                     <img src="./img/dovik.png" alt="dovik" style={{ width:'100%'}}/>
                     <h1>Dovik</h1>
                     <p class="profile-title">IoT Developer</p>
-                    <p>"Imagine Jing Yang coding in ReactJS"</p>
+                    <p>ReactJS,ReactNative,Java,Rpi3</p>
                         <a href="#"><SocialIcon url="https://www.facebook.com/" /></a>
                         <a href="#"><SocialIcon url="https://twitter.com/" /></a>
                         <a href="#"><SocialIcon url="https://www.youtube.com/" /></a>
@@ -30,7 +30,7 @@ class ContactScreen extends Component{
                     <img src="./img/anton.png" alt="anton" style={{ width:'100%'}}/>
                     <h1>Anton</h1>
                     <p class="profile-title">Web Developer</p>
-                    <p>"I'm coming from cold lands, but I code hot"</p>
+                    <p>NodeJS,MongoDB,Socket.io,Java</p>
                         <a href="#"><SocialIcon url="https://www.facebook.com/" /></a>
                         <a href="#"><SocialIcon url="https://twitter.com/" /></a>
                         <a href="#"><SocialIcon url="https://www.youtube.com/" /></a>
@@ -42,7 +42,7 @@ class ContactScreen extends Component{
                     <img src="./img/belemir.png" alt="belemir" style={{ width:'100%'}}/>
                     <h1>Belemir</h1>
                     <p class="profile-title">Mobile Developer</p>
-                    <p>"I'm like a Coding Panda"</p>
+                    <p>Java,Html5,CSS3,C#,Android</p>
                         <a href="#"><SocialIcon url="https://www.facebook.com/" /></a>
                         <a href="#"><SocialIcon url="https://twitter.com/" /></a>
                         <a href="#"><SocialIcon url="https://www.youtube.com/" /></a>
