@@ -1,35 +1,79 @@
 import React, {Component} from 'react';
 import Auxiliary from './hoc/Auxiliary';
 
+
+
 class LoginPage extends Component{
 
+    
+
+    constructor(props){
+        super(props);
+        this.state = {
+            isSignin : true
+        }
+    }
+
+    _handleClick = () => {
+        this.setState({
+            isSignin: !this.state.isSignin
+        })
+    }
+    
+ 
+
     render(){
+
+        const signInBody = (
+            <div>
+                <div className="signin"> 
+                    <h3>Sign In</h3>
+                    <h5>Username</h5>
+                    <input type="text"/>
+                    <h5>Password</h5>
+                    <input type="password"/>
+                    <br />
+                    <button className="loginbutton">Sign In</button>
+                    <p>Don't have an account yet? <span className="span-link" onClick={() => this._handleClick()}>Register</span> here</p>
+                </div>
+            </div>
+        )
+        
+        const signUpBody = (
+            <div>
+                <div className="signin"> 
+                    <h3>Sign Up</h3>
+                    <h5>Name</h5>
+                    <input type="text"/>
+                    <h5>Surname</h5>
+                    <input type="text"/>
+                    <h5>Username</h5>
+                    <input type="text"/>
+                    <h5>Password</h5>
+                    <input type="password"/>
+                    <h5>Re-type Password</h5>
+                    <input type="password"/>
+                    <br />
+                    <button className="loginbutton">Sign Up</button>
+                    <p>Already have an account?<span className="span-link" onClick={()=> this._handleClick()}> Sign in</span> here</p>
+                </div>
+            </div>
+        )
+
+
         return(
 
             <Auxiliary>
-                <form action="action_page.php">
-                <div className="imgcontainer">
-                    <img src="img_avatar2.png" alt="Avatar" className="avatar"/>
-                </div>
-
-                <div className="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required/>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required/>
-
-                    <button type="submit">Login</button>
-                    <label>
-                    <input type="checkbox" checked="checked" name="remember"/> Remember me
-                    </label>
-                </div>
-
-                <div className="container" style={{backgroundColor: '#f1f1f1'}}>
-                    <button type="button" className="cancelbtn">Cancel</button>
-                    <span className="psw">Forgot <a href="#">password?</a></span>
-                </div>
-                </form>
+                <br />
+                <br />
+                <br />
+                <br />
+                <section id="loginpart">
+                    <h2>Login Page</h2>
+                    {
+                        this.state.isSignin ? signInBody : signUpBody
+                    }
+                </section>
             </Auxiliary>
 
         )

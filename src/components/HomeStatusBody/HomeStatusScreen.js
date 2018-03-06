@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import socketIOClient from "socket.io-client";
+import { Link } from 'react-router-dom';
 import Auxiliary from '../hoc/Auxiliary';
 
 class HomeStatusScreen extends Component{
@@ -11,7 +12,8 @@ class HomeStatusScreen extends Component{
           humidity: false,
           gasstatus: false,
           garagestatus: false,
-          endpoint: "http://192.168.1.105:8888"
+          endpoint: "http://192.168.1.105:8888",
+          isLoggedIn: false
         };
       }
 
@@ -22,11 +24,14 @@ class HomeStatusScreen extends Component{
       }
 
     render(){
-        const { temperature, humidity, gasstatus, garagestatus } = this.state;
+        const { isLoggedIn,temperature, humidity, gasstatus, garagestatus } = this.state;
        
         return (
           <Auxiliary>
-          
+
+           {
+             isLoggedIn ? 
+           
           <section id="sensorblocks">
             <div className="heatdata">
               <h1>Heat & Humidity Status</h1>
@@ -76,6 +81,12 @@ class HomeStatusScreen extends Component{
                 }
             </div>
           </section>
+          :
+          <div id="signalert">
+            <h1>You should Sign In first</h1>
+            <button><Link to="/login">Sign In</Link></button>
+          </div>
+          } 
           </Auxiliary>
         );
     }

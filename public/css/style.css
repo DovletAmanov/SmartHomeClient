@@ -392,6 +392,56 @@ body{
   grid-column-gap: 2em;
 }
 
+/* Login Section */
+#loginpart{
+  text-align: center;
+  width: 33%;
+  margin: auto;
+  background: greenyellow;
+  border: blueviolet solid 3px;
+  border-radius: 4%;
+
+}
+
+#loginpart input{
+  height: 30px;
+  border: green;
+  border-radius: 5%;
+}
+
+.loginbutton{
+  margin-top: 25px;
+  width: 33%;
+  height: 40px;
+  background:lightseagreen;
+  font-size: 20px;
+  border: white solid 2px;
+  border-radius: 5%;
+  color: white;
+}
+
+.span-link { 
+  color: maroon;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#signalert{
+  margin-top: 200px;
+  text-align: center;
+}
+
+#signalert button {
+  width: 20%;
+  height: 40px;
+  background:lightseagreen;
+  font-size: 20px;
+  border: white solid 2px;
+  border-radius: 5%;
+  color: white;
+  margin-bottom: 20em;
+}
+
 /* Not Found Page */
 
 #notfoundcomp{
