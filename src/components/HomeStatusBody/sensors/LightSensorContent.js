@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Auxiliary from '../../hoc/Auxiliary';
 
-class MotionSensorContent extends Component{
+class LightSensorContent extends Component{
 
     render(){
         return(
             <Auxiliary>
-                 <div className="motiondata">
-                    <h1>Motion Status</h1>
-                    <img src="./img/motion.png"/>
+                <div className="lightdata">
+                    <h1>Light Status</h1>
+                    <img src="./img/light.png"/>
                     
                     <p>
                         {
-                            this.props.motionstatus
+                            this.props.lightstatus
                         }
                     </p>
                 </div>
@@ -21,4 +21,4 @@ class MotionSensorContent extends Component{
     }
 }
 
-export default MotionSensorContent;
+export default LightSensorContent;

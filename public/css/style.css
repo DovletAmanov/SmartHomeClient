@@ -343,11 +343,37 @@ body{
     grid-column-gap: 2em;
   }
 
-  .heatdata, .garagedata ,.gasdata{
+  .heatdata,
+  .garagedata,
+  .gasdata,
+  .motiondata,
+  .lightdata,
+  .raindata{
     text-align: center;
     border: 2px orangered solid;
     padding: 25px;
+    margin: 8px;
     border-radius: 5%;
+  }
+
+  .heatdata p,
+  .garagedata p,
+  .gasdata p,
+  .motiondata p,
+  .lightdata p,
+  .raindata p{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .heatdata img,
+  .garagedata img,
+  .gasdata  img,
+  .motiondata img,
+  .lightdata img,
+  .raindata img{
+   width: 128px;
+   height: 128px;
   }
 
   /* Contact Page */
