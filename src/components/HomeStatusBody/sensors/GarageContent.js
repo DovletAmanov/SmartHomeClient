@@ -5,19 +5,20 @@ class GarageContent extends Component{
 
 
     render(){
+        let { garagestatus, handleGarageButton } = this.props;
         return(
             <Auxiliary>
                 <div className="garagedata">
                     <h1>Garage Door Status</h1>
                     <img src="./img/garage.png"/>
                     {
-                        this.props.garagestatus 
+                       garagestatus 
                         ?
                         <div>
                             <p>Garage is Open</p>
                             <button 
                                 className="sensorButtons"
-                                onClick={()=> this.props.handleGarageButton()}
+                                onClick={() => handleGarageButton()}
                             >
                             Close the Garage Door
                             </button>
@@ -27,7 +28,7 @@ class GarageContent extends Component{
                             <p>Garage is Closed</p>
                             <button 
                                 className="sensorButtons"
-                                onClick={()=> this.props.handleGarageButton()}
+                                onClick={() => handleGarageButton()}
                             >
                             Open the Garage Door
                             </button>

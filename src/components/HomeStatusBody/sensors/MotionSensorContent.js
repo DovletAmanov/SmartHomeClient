@@ -4,6 +4,7 @@ import Auxiliary from '../../hoc/Auxiliary';
 class MotionSensorContent extends Component{
 
     render(){
+        let { motionstatus } = this.props;
         return(
             <Auxiliary>
                  <div className="motiondata">
@@ -12,7 +13,7 @@ class MotionSensorContent extends Component{
                     
                     <p>
                         {
-                            this.props.motionstatus
+                            motionstatus
                         }
                     </p>
                 </div>

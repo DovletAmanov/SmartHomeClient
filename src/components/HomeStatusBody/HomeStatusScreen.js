@@ -9,17 +9,18 @@ import LightSensorContent from './sensors/LightSensorContent';
 import RainSensorContent from './sensors/RainSensorContent';
 import MotionSensorContent from './sensors/MotionSensorContent';
 
+const LOADING_TEXT = 'Loading Data From Sensor...';
+
 class HomeStatusScreen extends Component{
   
     constructor() {
         super();
         this.state = {
-          temperature: false,
-          humidity: false,
-          gasstatus: false,
+          dhtstatus: LOADING_TEXT,
+          gasstatus: LOADING_TEXT,
           garagestatus: 'Garage is Closed',
-          rainstatus: 'Loading Data From Sensor...',
-          motionstatus: 'Loading Data From Sensor...',
+          rainstatus: LOADING_TEXT,
+          motionstatus: LOADING_TEXT,
           lightstatus: 'Loading Data From Sensor...',
           endpoint: "http://192.168.1.109:8888",
           isLoggedIn: true
@@ -30,19 +31,11 @@ class HomeStatusScreen extends Component{
         const { endpoint } = this.state;
         const socket = socketIOClient(endpoint);  
         socket.on("sendingsensordata", data => this.setState({ 
-          temperature: data.temperature,
-          humidity: data.humidity,
+          dhtstatus: data.dhtstatus,
           motionstatus: data.motionstatus,
-          lightstatus: data.lightstatus 
+          lightstatus: data.lightstatus,
+          rainstatus: data.rainstatus 
         }));
-        socket.on("sendingrain", raindata => this.setState({
-          rainstatus: raindata.statusrain
-        }));
-        console.log(this.state.rainstatus);
-        setInterval(()=> this.setState({
-          rainstatus: "Rain NOT Detected",
-          lightstatus: "Light NOT Detected"
-        }), 3000);
       }
       
     _handleGarageButton = () =>{
@@ -51,14 +44,13 @@ class HomeStatusScreen extends Component{
       this.setState({
         garagestatus: !this.state.garagestatus
       })
-      socket.emit('garagedata',{ garagedata: this.state.garagestatus })
+      socket.emit('garagedata',{ garagedata: this.state.garagestatus });
     }
 
     render(){
-        const { 
+        let { 
           isLoggedIn,
-          temperature, 
-          humidity, 
+          dhtstatus,
           gasstatus, 
           garagestatus,
           rainstatus,
@@ -78,8 +70,7 @@ class HomeStatusScreen extends Component{
 
               {/* Heat & Humidity Sensor */}
               <HeatSensorContent 
-                  temperature={temperature}
-                  humidity={humidity}
+                  dhtstatus={dhtstatus}
               />
 
               {/* Gas Sensor */}

@@ -10,14 +10,11 @@ class GasSensorContent extends Component{
                 <div className="gasdata">
                     <h1>Dangerous Gas Status</h1>
                     <img src="./img/gas.png"/>
-                    
-                    {
-                    gasstatus
-                    ?
-                    <p>Methane:</p>
-                    :
-                    <p>Loading data from gas sensor...</p>
-                    }
+                    <p>
+                        {
+                            gasstatus
+                        }
+                    </p>
                 </div>
              </Auxiliary>
         )

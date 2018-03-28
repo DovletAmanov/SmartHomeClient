@@ -4,6 +4,7 @@ import Auxiliary from '../../hoc/Auxiliary';
 class LightSensorContent extends Component{
 
     render(){
+        let { lightstatus } = this.props;
         return(
             <Auxiliary>
                 <div className="lightdata">
@@ -12,7 +13,7 @@ class LightSensorContent extends Component{
                     
                     <p>
                         {
-                            this.props.lightstatus
+                            lightstatus
                         }
                     </p>
                 </div>
