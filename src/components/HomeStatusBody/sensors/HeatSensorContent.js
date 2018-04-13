@@ -8,7 +8,7 @@ class HeatSensorContent extends Component{
         let { dhtstatus } = this.props;
         return(
             <Auxiliary>
-                 <div className="heatdata">
+                 <div className="sensordata">
                     <h1>Heat & Humidity Status</h1>
                     <img src="./img/temperature.png"/>
                     <div style={{ textAlign: "center" }}>

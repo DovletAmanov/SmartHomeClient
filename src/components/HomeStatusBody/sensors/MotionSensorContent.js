@@ -7,7 +7,7 @@ class MotionSensorContent extends Component{
         let { motionstatus } = this.props;
         return(
             <Auxiliary>
-                 <div className="motiondata">
+                 <div className="sensordata">
                     <h1>Motion Status</h1>
                     <img src="./img/motion.png"/>
                     

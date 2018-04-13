@@ -7,9 +7,9 @@ class LightSensorContent extends Component{
         let { lightstatus } = this.props;
         return(
             <Auxiliary>
-                <div className="lightdata">
+                <div className="sensordata">
                     <h1>Light Status</h1>
-                    <img src="./img/light.png"/>
+                    <img src="./img/lightsensor.png"/>
                     
                     <p>
                         {

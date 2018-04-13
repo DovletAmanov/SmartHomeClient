@@ -7,7 +7,7 @@ class RainSensorContent extends Component{
         let { rainstatus } = this.props
         return(
             <Auxiliary>
-                 <div className="raindata">
+                 <div className="sensordata">
                     <h1>Rain Status</h1>
                     <img src="./img/rain.png"/>
                     

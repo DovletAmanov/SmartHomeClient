@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 
+
 class App extends Component{
 
     componentDidUpdate(prevProps) {
@@ -15,19 +16,21 @@ class App extends Component{
 
 
     render(){
+
+      
         
         return(
-
-            <Auxiliary>
-
-                <Navbar />
-
-                <MainLayout />
-
-                <Footer />
-
-            </Auxiliary>
             
+                <Auxiliary>
+
+                    <Navbar />
+
+                    <MainLayout />
+
+                    <Footer />
+
+                </Auxiliary>
+
         )
     }
 }

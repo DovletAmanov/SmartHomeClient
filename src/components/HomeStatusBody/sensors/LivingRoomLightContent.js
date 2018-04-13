@@ -1,36 +1,37 @@
 import React, { Component } from 'react';
 import Auxiliary from '../../hoc/Auxiliary';
 
-class GarageContent extends Component{
+class LivingRoomLightContent extends Component{
 
 
     render(){
-        let { garagestatus, handleSensorButton } = this.props;
+        let { livingRoomLightStatus, handleSensorButton } = this.props;
         return(
             <Auxiliary>
                 <div className="sensordata">
-                    <h1>Garage Door Status</h1>
-                    <img src="./img/garage.png"/>
+                    <h1>Living Room Light Status</h1>
                     {
-                       garagestatus 
+                       livingRoomLightStatus 
                         ?
                         <div>
-                            <p>Garage is Open</p>
+                            <img src="./img/lighton.png"/>
+                            <p>Light is ON</p>
                             <button 
                                 className="sensorButtons"
-                                onClick={() => handleSensorButton("garageDoor")}
+                                onClick={() => handleSensorButton("livingRoomLight")}
                             >
-                            Close the Door
+                            Switch OFF the light
                             </button>
                         </div>
                         :
                         <div>
-                            <p>Garage is Closed</p>
+                            <img src="./img/lightoff.png"/>
+                            <p>Light is OFF</p>
                             <button 
                                 className="sensorButtons"
-                                onClick={() => handleSensorButton("garageDoor")}
+                                onClick={() => handleSensorButton("livingRoomLight")}
                             >
-                            Open the 0Door
+                            Switch ON the light
                             </button>
                         </div>
                     }
@@ -40,4 +41,4 @@ class GarageContent extends Component{
     }
 }
 
-export default GarageContent;
+export default LivingRoomLightContent;

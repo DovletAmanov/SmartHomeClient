@@ -338,18 +338,21 @@ body{
   #sensorblocks{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
     padding:25px;
-    padding-top: 150px;
-    grid-column-gap: 2em;
+    padding-top: 130px;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 1.5em;
   }
 
   .sensorButtons{
     position: relative;
     vertical-align: top;
-    width: 70%;
-    height: 50px;
+    width: 50%;
+    height: 40px;
     padding: 0;
-    font-size: 22px;
+    font-size: 20px;
+    margin-bottom: 15px;
     color: white;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
@@ -367,35 +370,20 @@ body{
     box-shadow: none;
   }
 
-  .heatdata,
-  .garagedata,
-  .gasdata,
-  .motiondata,
-  .lightdata,
-  .raindata{
+  .sensordata{
     text-align: center;
     border: 2px orangered solid;
-    padding: 25px;
-    margin: 8px;
+    /* padding: 25px;
+    margin: 8px; */
     border-radius: 5%;
   }
 
-  .heatdata p,
-  .garagedata p,
-  .gasdata p,
-  .motiondata p,
-  .lightdata p,
-  .raindata p{
+  .sensordata p{
     font-size: 20px;
     font-weight: bolder;
   }
 
-  .heatdata img,
-  .garagedata img,
-  .gasdata  img,
-  .motiondata img,
-  .lightdata img,
-  .raindata img{
+  .sensordata img{
    width: 128px;
    height: 128px;
   }
