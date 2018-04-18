@@ -5,7 +5,7 @@ class HeatSensorContent extends Component{
 
 
     render(){
-        let { dhtstatus } = this.props;
+        let { temperature, humidity } = this.props;
         return(
             <Auxiliary>
                  <div className="sensordata">
@@ -14,7 +14,11 @@ class HeatSensorContent extends Component{
                     <div style={{ textAlign: "center" }}>
                     <p>
                         {
-                            dhtstatus
+                             temperature && humidity
+                             ?
+                             `${temperature} Celcius / ${humidity} %`
+                             :
+                             `Fetching Data...`
                         }
                     </p>
                     </div>

@@ -13,32 +13,33 @@ import LivingRoomLightContent from './sensors/LivingRoomLightContent';
 import KitchenLightContent from './sensors/KitchenLightContent';
 
 
-const LOADING_TEXT = 'Loading Data From Sensor...';
+const LOADING_TEXT = 'Fetching Data...';
+const endpoint = "http://192.168.1.109:8888";
+const socket = socketIOClient(endpoint);  
 
 class HomeStatusScreen extends Component{
   
     constructor() {
         super();
         this.state = {
-          dhtStatus: LOADING_TEXT,
+          temperature: '',
+          humidity: '',
           gasStatus: LOADING_TEXT,
-          garageStatus: 'Garage is Closed',
+          garageStatus: false,
           rainStatus: LOADING_TEXT,
           motionStatus: LOADING_TEXT,
-          kitchenLightStatus: LOADING_TEXT,
-          livingRoomLightStatus: LOADING_TEXT,
-          garageLightStatus: LOADING_TEXT,
-          lightStatus: 'Loading Data From Sensor...',
-          endpoint: "http://192.168.1.109:8888",
+          kitchenLightStatus: false,
+          livingRoomLightStatus: false,
+          garageLightStatus: false,
+          lightStatus: LOADING_TEXT,
           isLoggedIn: true
         };
       }
 
       componentDidMount() {
-        const { endpoint } = this.state;
-        const socket = socketIOClient(endpoint);  
         socket.on("sendingsensordata", data => this.setState({ 
-          dhtStatus: data.dhtstatus,
+          temperature: data.temperature,
+          humidity: data.humidity,
           motionStatus: data.motionstatus,
           lightStatus: data.lightstatus,
           rainStatus: data.rainstatus,
@@ -50,37 +51,38 @@ class HomeStatusScreen extends Component{
 
     _handleSensorButton = input =>{
 
-      const { endpoint } = this.state;
-      const socket = socketIOClient(endpoint);
-
       switch(input){
 
         case "garageDoor":
             this.setState({
               garageStatus: !this.state.garageStatus
-            })
-            socket.emit('garageDoorEvent',{ garageData: this.state.garageStatus });
+            }, () => {
+              socket.emit('garageDoorEvent',{ garageData: this.state.garageStatus });
+            });
             break;
         
         case "livingRoomLight":
             this.setState({
               livingRoomLightStatus: !this.state.livingRoomLightStatus
-            })
-            socket.emit('livingRoomLightEvent',{ livingRoomLightData: this.state.livingRoomLightStatus });
+            }, () => {
+              socket.emit('livingRoomLightEvent',{ livingRoomLightData: this.state.livingRoomLightStatus });
+            });
             break;
         
         case "kitchenLight":
             this.setState({
               kitchenLightStatus: !this.state.kitchenLightStatus
-            })
-            socket.emit('kitchenLightEvent',{ kitchenLightData: this.state.kitchenLightStatus });
+            }, () => {
+              socket.emit('kitchenLightEvent',{ kitchenLightData: this.state.kitchenLightStatus });
+            });
             break;
 
         case "garageLight":
             this.setState({
               garageLightStatus: !this.state.garageLightStatus
-            })
-            socket.emit('garageLightEvent',{ garageLightData: this.state.garageLightStatus });
+            }, () => {
+              socket.emit('garageLightEvent',{ garageLightData: this.state.garageLightStatus });
+            });
             break;
       }
     }
@@ -90,7 +92,8 @@ class HomeStatusScreen extends Component{
       
         let { 
           isLoggedIn,
-          dhtStatus,
+          temperature,
+          humidity,
           gasStatus, 
           garageStatus,
           rainStatus,
@@ -113,7 +116,8 @@ class HomeStatusScreen extends Component{
 
               {/* Heat & Humidity Sensor */}
               <HeatSensorContent 
-                  dhtstatus={ dhtStatus }
+                  temperature={ temperature }
+                  humidity={ humidity }
               />
 
               {/* Gas Sensor */}

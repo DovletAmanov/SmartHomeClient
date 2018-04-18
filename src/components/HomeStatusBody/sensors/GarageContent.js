@@ -30,7 +30,7 @@ class GarageContent extends Component{
                                 className="sensorButtons"
                                 onClick={() => handleSensorButton("garageDoor")}
                             >
-                            Open the 0Door
+                            Open the Door
                             </button>
                         </div>
                     }
