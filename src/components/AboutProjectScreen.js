@@ -30,18 +30,18 @@ class AboutProjectScreen extends Component{
                 <section id="boxes">
                     <div className="container">
                         <div className="box">
-                        <img src="./img/celsius.png" alt="img"/>
-                        <h3>Heat & Humidity Information</h3>
+                        <img src="./img/status.png" alt="img"/>
+                        <h3>Checking Home Status</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                         </div>
                         <div className="box">
-                        <img src="./img/garage.png" alt="img"/>
-                        <h3>Autonomous Garage Door</h3>
+                        <img src="./img/security.png" alt="img"/>
+                        <h3>Security</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                         </div>
                         <div className="box">
-                        <img src="./img/umbrella.png" alt="img"/>
-                        <h3>Avoiding Dangerous Gas</h3>
+                        <img src="./img/support.png" alt="img"/>
+                        <h3>Assistant Support</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                         </div>
                     </div>

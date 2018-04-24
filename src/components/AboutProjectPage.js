@@ -28,30 +28,30 @@ class NotFound extends Component{
                     <div className="aboutfeatures">
                         <div className="aboutsensor">
                             <div className="aboutimgs">
-                                <img src="./img/celsius.png" alt="img"/>
+                                <img src="./img/status.png" alt="img"/>
                             </div>
                             <div className="abouttitles">
-                                <h3>Heat & Humidity Sensors</h3>
+                                <h3>Check Home Status</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                             </div>
                         </div>
                         
                         <div className="aboutsensor">
                             <div className="abouttitles">
-                                <h3>Dangerous Gas Sensor</h3>
+                                <h3>Security</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                             </div>
                             <div className="aboutimgs">
-                                <img src="./img/umbrella.png" alt="img"/>
+                                <img src="./img/security.png" alt="img"/>
                             </div>
                         </div>
 
                         <div className="aboutsensor">
                             <div className="aboutimgs">
-                                <img src="./img/garage.png" alt="img"/>
+                                <img src="./img/support.png" alt="img"/>
                             </div>
                             <div className="abouttitles">
-                                <h3>Autonomous Garage</h3>
+                                <h3>Assistant Support</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
                             </div>
                         </div>
