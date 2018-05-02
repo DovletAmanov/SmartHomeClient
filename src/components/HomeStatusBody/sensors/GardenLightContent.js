@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import Auxiliary from '../../hoc/Auxiliary';
 
-class KitchenLightContent extends Component{
+class GardenLightContent extends Component{
 
 
     render(){
-        let { kitchenLightStatus, handleSensorButton } = this.props;
+
+        let { gardenLightStatus, handleSensorButton } = this.props;
+
         return(
             <Auxiliary>
                 <div className="sensordata">
-                    <h1>Kitchen Light Status</h1>
+                    <h1>Garden Light Status</h1>
                     {
-                       kitchenLightStatus 
+                       gardenLightStatus 
                         ?
                         <div>
                             <img src="./img/lighton.png"/>
                             <p>Light is ON</p>
                             <button 
                                 className="sensorButtons"
-                                onClick={() => handleSensorButton("kitchenLight")}
+                                onClick={() => handleSensorButton("gardenLight")}
                             >
                             Switch OFF the light
                             </button>
@@ -29,7 +31,7 @@ class KitchenLightContent extends Component{
                             <p>Light is OFF</p>
                             <button 
                                 className="sensorButtons"
-                                onClick={() => handleSensorButton("kitchenLight")}
+                                onClick={() => handleSensorButton("gardenLight")}
                             >
                             Switch ON the light
                             </button>
@@ -41,4 +43,4 @@ class KitchenLightContent extends Component{
     }
 }
 
-export default KitchenLightContent;
+export default GardenLightContent;

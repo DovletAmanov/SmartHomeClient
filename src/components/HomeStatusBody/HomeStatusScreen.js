@@ -11,6 +11,7 @@ import MotionSensorContent from './sensors/MotionSensorContent';
 import GarageLightContent from './sensors/GarageLightContent';
 import LivingRoomLightContent from './sensors/LivingRoomLightContent';
 import KitchenLightContent from './sensors/KitchenLightContent';
+import GardenLightContent from './sensors/GardenLightContent';
 
 
 const LOADING_TEXT = 'Fetching Data...';
@@ -31,6 +32,7 @@ class HomeStatusScreen extends Component{
           kitchenLightStatus: false,
           livingRoomLightStatus: false,
           garageLightStatus: false,
+          gardenLightStatus: false,
           lightStatus: LOADING_TEXT,
           isLoggedIn: true
         };
@@ -40,10 +42,15 @@ class HomeStatusScreen extends Component{
         socket.on("sendingsensordata", data => this.setState({ 
           temperature: data.temperature,
           humidity: data.humidity,
-          motionStatus: data.motionstatus,
-          lightStatus: data.lightstatus,
-          rainStatus: data.rainstatus,
-          gasStatus: data.gasstatus 
+          motionStatus: data.motionStatus,
+          lightStatus: data.lightStatus,
+          rainStatus: data.rainStatus,
+          gasStatus: data.gasStatus,
+          garageStatus: data.garageStatus,
+          kitchenLightStatus: data.kitchenLightStatus,
+          livingRoomLightStatus: data.livingRoomLightStatus,
+          garageLightStatus: data.garageLightStatus,
+          gardenLightStatus: data.gardenLightStatus 
         }));
       }
 
@@ -84,6 +91,14 @@ class HomeStatusScreen extends Component{
               socket.emit('garageLightEvent',{ garageLightData: this.state.garageLightStatus });
             });
             break;
+
+        case "gardenLight":
+            this.setState({
+              gardenLightStatus: !this.state.gardenLightStatus
+            }, () => {
+              socket.emit('gardenLightEvent',{ gardenLightData: this.state.gardenLightStatus });
+            });
+            break;
       }
     }
 
@@ -102,6 +117,7 @@ class HomeStatusScreen extends Component{
           kitchenLightStatus,
           garageLightStatus,
           livingRoomLightStatus,
+          gardenLightStatus
         } = this.state;
        
         return (
@@ -161,6 +177,12 @@ class HomeStatusScreen extends Component{
               {/* Garage Light */}
               <GarageLightContent 
                 garageLightStatus={ garageLightStatus }
+                handleSensorButton={ this._handleSensorButton }
+              />
+
+              {/* Garden Light */}
+              <GardenLightContent
+                gardenLightStatus={ gardenLightStatus }
                 handleSensorButton={ this._handleSensorButton }
               />
               
