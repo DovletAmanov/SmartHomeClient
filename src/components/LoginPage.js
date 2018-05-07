@@ -29,9 +29,9 @@ class LoginPage extends Component{
                 <div className="signin"> 
                     <h3>Sign In</h3>
                     <h5>Username</h5>
-                    <input type="text"/>
+                    <input className="logininput" type="text"/>
                     <h5>Password</h5>
-                    <input type="password"/>
+                    <input className="logininput" type="password"/>
                     <br />
                     <button className="loginbutton">Sign In</button>
                     <p>Don't have an account yet? <span className="span-link" onClick={() => this._handleClick()}>Register</span> here</p>
@@ -44,15 +44,15 @@ class LoginPage extends Component{
                 <div className="signin"> 
                     <h3>Sign Up</h3>
                     <h5>Name</h5>
-                    <input type="text"/>
+                    <input className="logininput" type="text"/>
                     <h5>Surname</h5>
-                    <input type="text"/>
+                    <input className="logininput" type="text"/>
                     <h5>Username</h5>
-                    <input type="text"/>
+                    <input className="logininput" type="text"/>
                     <h5>Password</h5>
-                    <input type="password"/>
+                    <input className="logininput" type="password"/>
                     <h5>Re-type Password</h5>
-                    <input type="password"/>
+                    <input className="logininput" type="password"/>
                     <br />
                     <button className="loginbutton">Sign Up</button>
                     <p>Already have an account?<span className="span-link" onClick={()=> this._handleClick()}> Sign in</span> here</p>

@@ -79,7 +79,7 @@ body{
   }
   
   header .highlight, header .current a{
-    color:yellow;
+    color: #1E90FF;
     font-weight:bold;
   }
   
@@ -243,7 +243,7 @@ body{
     padding:20px;
     margin-top:20px;
     color:#ffffff;
-    background-color:#e8491d;
+    background-color:#35424a;
     text-align: center;
   }
 
@@ -279,9 +279,9 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: auto;
-    background: grey;
+    background: rgb(60, 122, 151);
     border: lightgrey 1px solid;
-    border-radius: 8%;
+    
   }
 
   .aboutimgs{
@@ -372,7 +372,7 @@ body{
 
   .sensordata{
     text-align: center;
-    border: 2px orangered solid;
+    border: 2px #35424a solid;
     /* padding: 25px;
     margin: 8px; */
     border-radius: 5%;
@@ -435,10 +435,11 @@ body{
   text-align: center;
   width: 33%;
   margin: auto;
-  background: greenyellow;
-  border: blueviolet solid 3px;
-  border-radius: 4%;
+}
 
+.logininput {
+  border: none;
+  border-bottom: 2px solid red;
 }
 
 #loginpart input{

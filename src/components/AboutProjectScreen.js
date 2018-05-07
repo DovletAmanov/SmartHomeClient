@@ -9,11 +9,12 @@ class AboutProjectScreen extends Component{
             <Auxiliary>
 
                 <section id="welcoming">
-                    <h1>Hello World</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies
+                    <h1>Bring innovation to your home</h1>
+                    <p>When we are not at home little doubts can arise in our minds. Imagine a smart home system that informs you about the home status and enables you to control your home from anywhere in the world with a simple click.
+                    You can turn on/off your lights, see the change of heat and humidity in the rooms, protect your home from gas leak and burglars under favour of gas and sound sensors.
+                    More importantly, smart home asisstant will learn your habits and give you suggestions according to them. 
+                    Try our smart home model to make your life easy and convenient!
+                
                     </p>
                 </section>
                 
@@ -32,17 +33,17 @@ class AboutProjectScreen extends Component{
                         <div className="box">
                         <img src="./img/status.png" alt="img"/>
                         <h3>Checking Home Status</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                        <p>Stay informed about your home status</p>
                         </div>
                         <div className="box">
                         <img src="./img/security.png" alt="img"/>
                         <h3>Security</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                        <p>System will notify you in case of threat detection</p>
                         </div>
                         <div className="box">
                         <img src="./img/support.png" alt="img"/>
                         <h3>Assistant Support</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                        <p>Assistant will help you if you want to get voice data</p>
                         </div>
                     </div>
                 </section>
